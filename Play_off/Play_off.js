@@ -24,9 +24,9 @@ export default class Play_off {
 
     showTeam() {
         console.log(`GRUPO A: ${this.teams[0].name}, ${this.teams[1].name}`)
-        console.log(`GRUPO A: ${this.teams[2].name}, ${this.teams[3].name}`)
-        console.log(`GRUPO A: ${this.teams[4].name}, ${this.teams[5].name}`)
-        console.log(`GRUPO A: ${this.teams[6].name}, ${this.teams[7].name}`)
+        console.log(`GRUPO B: ${this.teams[2].name}, ${this.teams[3].name}`)
+        console.log(`GRUPO C: ${this.teams[4].name}, ${this.teams[5].name}`)
+        console.log(`GRUPO D: ${this.teams[6].name}, ${this.teams[7].name}`)
     }
 
     quarterFinals() {
@@ -120,5 +120,38 @@ export default class Play_off {
         }
     }
     
-    
+    thirdAndFourth() {
+        this.third[0].goalsFor = this.generateGoals()
+        this.third[1].goalsFor = this.generateGoals()
+        while (this.third[0].goalsFor === this.third[1].goalsFor){
+            this.third[0].goalsFor = this.generateGoals()
+            this.third[1].goalsFor = this.generateGoals()
+        }
+        if (this.third[0].goalsFor>this.third[1].goalsFor) {
+            console.log(`${this.third[0].name} ${this.third[0].goalsFor} - ${this.third[1].name} ${this.third[1].goalsFor} => ${this.third[0].name}       (3y4: Perdedor S1 - Perdedor S2)`)
+        }else {
+            console.log(`${this.third[0].name} ${this.third[0].goalsFor} - ${this.third[1].name} ${this.third[1].goalsFor} => ${this.third[1].name}       (3y4: Perdedor S1 - Perdedor S2)`)
+        }
+    }
+
+    last() {
+        this.winer = []
+        this.final[0].goalsFor = this.generateGoals()
+        this.final[1].goalsFor = this.generateGoals()
+        while (this.final[0].goalsFor === this.final[1].goalsFor){
+            this.final[0].goalsFor = this.generateGoals()
+            this.final[1].goalsFor = this.generateGoals()
+        }
+        if (this.final[0].goalsFor>this.final[1].goalsFor) {
+            this.winer.push(this.final[0])
+            console.log(`${this.final[0].name} ${this.final[0].goalsFor} - ${this.final[1].name} ${this.final[1].goalsFor} => ${this.final[0].name}       (Final: Ganador S1 - Ganador S2)`)
+        }else {
+            this.winer.push(this.final[1])
+            console.log(`${this.final[0].name} ${this.final[0].goalsFor} - ${this.final[1].name} ${this.final[1].goalsFor} => ${this.final[1].name}       (Final: Ganador S1 - Ganador S2)`)
+        }
+
+    }
+    winnerWinnerChickenDinner(){
+        console.log(`¡${this.winer[0].name} Campeona de la EURO WOMEN'S CUP!`)
+    }
 }

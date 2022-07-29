@@ -24,3 +24,14 @@ console.log("===== SEMIFINALES =====")
 
 finals.semi()
 
+console.log("===== TERCER Y CUARTO PUESTO =====")
+
+finals.thirdAndFourth()
+
+console.log("===== FINAL =====")
+
+finals.last()
+
+console.log("=================================================")
+finals.winnerWinnerChickenDinner()
+console.log("=================================================")
