@@ -19,3 +19,8 @@ finals.showTeam()
 console.log("======== CUARTOS DE FINAL ======")
 
 finals.quarterFinals()
+
+console.log("===== SEMIFINALES =====")
+
+finals.semi()
+
