@@ -40,8 +40,8 @@ export default class Play_off {
         this.teams[6].goalsFor = this.generateGoals()
         this.teams[7].goalsFor = this.generateGoals()
         while (this.teams[0].goalsFor === this.teams[3].goalsFor){
-            this.teams[0].goalsFor = this.generateGoals()
-            this.teams[3].goalsFor = this.generateGoals()
+            this.teams[0].goalsFor += this.generateGoals()
+            this.teams[3].goalsFor += this.generateGoals()
         }
         if (this.teams[0].goalsFor>this.teams[3].goalsFor) {
             this.semiFinals.push(this.teams[0])
@@ -51,8 +51,8 @@ export default class Play_off {
             console.log(`${this.teams[0].name} ${this.teams[0].goalsFor} - ${this.teams[3].name} ${this.teams[3].goalsFor} => ${this.teams[3].name}       (C1: Camp A - Subc B)`)
         }
         while (this.teams[2].goalsFor === this.teams[1].goalsFor){
-            this.teams[2].goalsFor = this.generateGoals()
-            this.teams[1].goalsFor = this.generateGoals()
+            this.teams[2].goalsFor += this.generateGoals()
+            this.teams[1].goalsFor += this.generateGoals()
         }
         if (this.teams[2].goalsFor>this.teams[1].goalsFor) {
             this.semiFinals.push(this.teams[2])
@@ -62,8 +62,8 @@ export default class Play_off {
             console.log(`${this.teams[2].name} ${this.teams[2].goalsFor} - ${this.teams[1].name} ${this.teams[1].goalsFor} => ${this.teams[1].name}       (C2: Camp B - Subc A)`)
         }
         while (this.teams[4].goalsFor === this.teams[7].goalsFor){
-            this.teams[4].goalsFor = this.generateGoals()
-            this.teams[7].goalsFor = this.generateGoals()
+            this.teams[4].goalsFor += this.generateGoals()
+            this.teams[7].goalsFor += this.generateGoals()
         }
         if (this.teams[4].goalsFor>this.teams[7].goalsFor) {
             this.semiFinals.push(this.teams[4])
@@ -73,8 +73,8 @@ export default class Play_off {
             console.log(`${this.teams[4].name} ${this.teams[4].goalsFor} - ${this.teams[7].name} ${this.teams[7].goalsFor} => ${this.teams[7].name}       (C3: Camp C - Subc D)`)
         }
         while (this.teams[6].goalsFor === this.teams[5].goalsFor){
-            this.teams[6].goalsFor = this.generateGoals()
-            this.teams[5].goalsFor = this.generateGoals()
+            this.teams[6].goalsFor += this.generateGoals()
+            this.teams[5].goalsFor += this.generateGoals()
         }
         if (this.teams[6].goalsFor>this.teams[5].goalsFor) {
             this.semiFinals.push(this.teams[6])
@@ -93,8 +93,8 @@ export default class Play_off {
         this.semiFinals[2].goalsFor = this.generateGoals()
         this.semiFinals[3].goalsFor = this.generateGoals()
         while (this.semiFinals[0].goalsFor === this.semiFinals[2].goalsFor){
-            this.semiFinals[0].goalsFor = this.generateGoals()
-            this.semiFinals[2].goalsFor = this.generateGoals()
+            this.semiFinals[0].goalsFor += this.generateGoals()
+            this.semiFinals[2].goalsFor += this.generateGoals()
         }
         if (this.semiFinals[0].goalsFor>this.semiFinals[2].goalsFor) {
             this.final.push(this.semiFinals[0])
@@ -106,8 +106,8 @@ export default class Play_off {
             console.log(`${this.semiFinals[0].name} ${this.semiFinals[0].goalsFor} - ${this.semiFinals[2].name} ${this.semiFinals[2].goalsFor} => ${this.semiFinals[2].name}       (S1: Ganador C1 - Ganador C3)`)
         }
         while (this.semiFinals[1].goalsFor === this.semiFinals[3].goalsFor){
-            this.semiFinals[1].goalsFor = this.generateGoals()
-            this.semiFinals[3].goalsFor = this.generateGoals()
+            this.semiFinals[1].goalsFor += this.generateGoals()
+            this.semiFinals[3].goalsFor += this.generateGoals()
         }
         if (this.semiFinals[1].goalsFor>this.semiFinals[3].goalsFor) {
             this.final.push(this.semiFinals[1])
@@ -124,8 +124,8 @@ export default class Play_off {
         this.third[0].goalsFor = this.generateGoals()
         this.third[1].goalsFor = this.generateGoals()
         while (this.third[0].goalsFor === this.third[1].goalsFor){
-            this.third[0].goalsFor = this.generateGoals()
-            this.third[1].goalsFor = this.generateGoals()
+            this.third[0].goalsFor += this.generateGoals()
+            this.third[1].goalsFor += this.generateGoals()
         }
         if (this.third[0].goalsFor>this.third[1].goalsFor) {
             console.log(`${this.third[0].name} ${this.third[0].goalsFor} - ${this.third[1].name} ${this.third[1].goalsFor} => ${this.third[0].name}       (3y4: Perdedor S1 - Perdedor S2)`)
@@ -139,8 +139,8 @@ export default class Play_off {
         this.final[0].goalsFor = this.generateGoals()
         this.final[1].goalsFor = this.generateGoals()
         while (this.final[0].goalsFor === this.final[1].goalsFor){
-            this.final[0].goalsFor = this.generateGoals()
-            this.final[1].goalsFor = this.generateGoals()
+            this.final[0].goalsFor += this.generateGoals()
+            this.final[1].goalsFor += this.generateGoals()
         }
         if (this.final[0].goalsFor>this.final[1].goalsFor) {
             this.winer.push(this.final[0])
